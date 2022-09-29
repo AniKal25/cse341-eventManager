@@ -1,0 +1,39 @@
+{
+  "name": "cse341-eventmanager",
+  "version": "1.0.0",
+  "description": "CSE 341 Personal project ",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AniKal25/cse341-eventManager.git"
+  },
+  "author": "Kalu Anita Barbra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AniKal25/cse341-eventManager/issues"
+  },
+  "homepage": "https://github.com/AniKal25/cse341-eventManager#readme",
+  "devDependencies": {
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.8",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.7.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "mongodb": "^4.10.0",
+    "mongoose": "^6.6.2"
+  },
+  "lint": "eslint .",
+  "lint:fix": "eslint --fix",
+  "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+}
