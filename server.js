@@ -3,8 +3,6 @@ const app = express();
 const mongoose = require('mongoose');
 const bodyParser =require('body-parser'); //req.body
 const cors = require('cors');
-const swaggerUi = require('swagger-ui-express');
-const swaggerDocument = require('./swagger.json');
 require('dotenv/config');
 const port = process.env.PORT || 8080;
 
@@ -29,7 +27,7 @@ app.use((req, res, next) => {
    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
    next();
  })
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
 
 app.use('/', require('./routes'))
 app.listen(port, () => {
