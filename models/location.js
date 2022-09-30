@@ -24,10 +24,8 @@ const LocationSchema = new mongoose.Schema({
   },
   webAddress: {
     type: String,
-  },
-  phoneNum: {
-    type: Number,
+  
   },
 })
 
-module.exports = mongoose.model('location', LocationSchema)
+module.exports = mongoose.model('Location', LocationSchema)

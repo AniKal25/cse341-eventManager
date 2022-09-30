@@ -1,0 +1,106 @@
+//Localhost
+###
+GET http://localhost:8080
+
+###
+GET http://localhost:8080/event
+
+###
+GET http://localhost:8080/location
+
+###
+GET http://localhost:8080/event/6335f60f955defa725466152 HTTP/1.1
+content-type: application/json 
+
+{
+        "eventName": "Agbaya Linkup 2.0",
+        "date": "11/30/2022",
+        "eventHost": "Agbaya Nnamdi",
+        "startTime": "3:00 PM",
+        "endTime": "10:00 PM",
+        "locationName": "Lawanson National Park",
+        "comments": "Everyone of us is an Agbaya!"
+    }
+###
+GET http://localhost:8080/location/63370c0e4451f994cf7d9468 HTTP/1.1
+content-type: application/json
+
+{
+    "locationName":"Ndubuisi National Park",
+    "streetAddress":"Plot 456, Alausa",
+    "city":"Ikeja",
+    "state":"Lagos",
+    "zipCode":"23401",
+    "webAddress":"https://www.agbayalinkup.com",
+    "phoneNum": "008-052-6502"
+}
+
+
+###
+POST http://localhost:8080/event HTTP/1.1
+content-type: application/json
+
+{      
+    "eventName": "Nike Art Studio Opening",
+    "date": "10/30/2022",
+    "eventHost": "Nike Ogulana",
+    "startTime": "10:00 AM",
+    "endTime": "4:00 PM",
+    "locationName": "Nike Studio",
+    "comments": "Come and experience the beauty of Art!"
+}
+###
+POST http://localhost:8080/location HTTP/1.1
+content-type: application/json
+
+{
+        "locationName": "Nike Studio",
+        "streetAddress": "Plot 16, Ikate",
+        "city": "Lekki",
+        "state": "Lagos",
+        "zipCode": "02121",
+        "webAddress": "https://www.nikeart.com",
+        
+}
+
+###
+PUT http://localhost:8080/event/63374cd5a028decc92f69805 HTTP/1.1
+content-type: application/json
+
+{      
+    "eventName": "Nike Art Studio Opening",
+    "date": "10/30/2022",
+    "eventHost": "Nike Ogulana",
+    "startTime": "10:00 AM",
+    "endTime": "4:00 PM",
+    "locationName": "Nike Studio",
+    "comments": "Come and experience the beauty of Art!"
+}
+
+###
+PUT http://localhost:8080/location/63374cd5a028decc92f69805 HTTP/1.1
+content-type: application/json
+
+{
+        "locationName": "Nike Studio",
+        "streetAddress": "Plot 16, Ikate",
+        "city": "Lekki",
+        "state": "Lagos",
+        "zipCode": "02121",
+        "webAddress": "https://www.nikeart.com",
+        
+}
+
+###
+DELETE http://localhost:8080/event/633704535749de4305946c9f HTTP/1.1
+content-type: application/json
+###
+DELETE http://localhost:8080/location/6336e9baecb7e417eaeb1c43 HTTP/1.1
+content-type: application/json
+
+
+//Production =>
+###
+GET https://cse341-eventmanager.onrender.com
+
+###

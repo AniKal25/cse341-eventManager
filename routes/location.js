@@ -1,23 +1,13 @@
 const routes = require('express').Router();
 
-const mongoose = require('mongoose')
+const {getAllLocations, getLocationById, newLocation, updateLocation, deleteLocation} = require('../controllers/location');
 
-const bodyParser = require("body-parser");
-routes.use(bodyParser.urlencoded({ extended: false }));
-routes.use(bodyParser.json());
+routes.get('/', getAllLocations);
+routes.get('/:id', getLocationById);
 
-const location = require('../models/location')
+routes.post('/', newLocation);
+routes.put('/:id', updateLocation);
+routes.delete('/:id', deleteLocation);
 
-//Get ALL
-routes.get("/", (req, res) => {
-    location.find({})
-    .then((data) => {
-      res.status(200).send(data);
-      console.log("returned all");
-    })
-    .catch((err) => {
-      res.status(500).send({
-        message: err.message || 'Some error occurred while retrieving location.'
-      });
-    });
-  });
+
+module.exports = routes;
