@@ -103,4 +103,68 @@ content-type: application/json
 ###
 GET https://cse341-eventmanager.onrender.com
 
+
 ###
+POST http://cse341-eventmanager.onrender.com/event HTTP/1.1
+content-type: application/json
+
+{      
+    "eventName": "Nike Art Studio Opening",
+    "date": "10/30/2022",
+    "eventHost": "Nike Ogulana",
+    "startTime": "10:00 AM",
+    "endTime": "4:00 PM",
+    "locationName": "Nike Studio",
+    "comments": "Come and experience the beauty of Art!"
+}
+###
+
+
+###
+POST http://cse341-eventmanager.onrender.com/location HTTP/1.1
+content-type: application/json
+
+{
+        "locationName": "Nike Studio",
+        "streetAddress": "Plot 16, Ikate",
+        "city": "Lekki",
+        "state": "Lagos",
+        "zipCode": "02121",
+        "webAddress": "https://www.nikeart.com",
+        
+}
+
+###
+PUT http://cse341-eventmanager.onrender.com/event/63374cd5a028decc92f69805 HTTP/1.1
+content-type: application/json
+
+{      
+    "eventName": "Nike Art Studio Opening",
+    "date": "10/30/2022",
+    "eventHost": "Nike Ogulana",
+    "startTime": "11:00 AM",
+    "endTime": "4:00 PM",
+    "locationName": "Nike Studio",
+    "comments": "Come and experience the beauty of Art!"
+}
+
+###
+PUT http://cse341-eventmanager.onrender.com/location/63374cd5a028decc92f69805 HTTP/1.1
+content-type: application/json
+
+{
+        "locationName": "Nike Studio",
+        "streetAddress": "Plot 16, Ikate",
+        "city": "Lekki",
+        "state": "Lagos",
+        "zipCode": "02121",
+        "webAddress": "https://www.nikeart.com",
+        
+}
+
+###
+DELETE http://cse341-eventmanager.onrender.com/event/633704535749de4305946c9f HTTP/1.1
+content-type: application/json
+###
+DELETE http://cse341-eventmanager.onrender.com/location/6336e9baecb7e417eaeb1c43 HTTP/1.1
+content-type: application/json
