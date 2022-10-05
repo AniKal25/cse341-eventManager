@@ -3,7 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser =require('body-parser'); //req.body
 const cors = require('cors');
-//require('dotenv/config');
+require('dotenv/config');
 const dotenv = require('dotenv')
 const morgan = require('morgan')
 const exphbs = require('express-handlebars')
