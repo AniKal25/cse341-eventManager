@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "My API",
-    "description": "Description",
+    "description": "<a id='logout' href='http://cse341-eventmanager.onrender.com/auth/logout'>Logout</a>",
     "version": "1.0.0"
   },
   "host": "cse341-eventmanager.onrender.com",
@@ -67,7 +67,7 @@
                 "endTime": {
                   "example": "6:00 pm"
                 },
-                "location": {
+                "locationName": {
                   "example": "Location Name"
                 },
                 "comments": {
@@ -81,19 +81,22 @@
           "200": {
             "description": "OK"
           },
+          "201": {
+            "description": "OK"
+          },
           "400": {
             "description": "Bad Request"
           }
         }
       }
     },
-    "/event/{id}": {
+    "/event/{eventId}": {
       "get": {
         "description": "",
         "produces": ["application/json"],
         "parameters": [
           {
-            "name": "id",
+            "name": "eventId",
             "in": "path",
             "required": true,
             "type": "string"
@@ -112,7 +115,7 @@
         "description": "",
         "parameters": [
           {
-            "name": "id",
+            "name": "eventId",
             "in": "path",
             "required": true,
             "type": "string"
@@ -127,7 +130,7 @@
                       "example": "Event Name"
                       },
                       "date": {
-                      "example": "11/30/2022"
+                      "example": "12/30/2022"
                       },
                       "eventHost": {
                       "example": "OVO"
@@ -138,7 +141,7 @@
                       "endTime": {
                       "example": "6:00 pm"
                       },
-                      "location": {
+                      "locationName": {
                       "example": "Location Name"
                       },
                       "comments": {
@@ -152,6 +155,9 @@
           "200": {
             "description": "OK"
           },
+          "204": {
+            "description": "OK"
+          },
           "400": {
             "description": "Bad Request"
           }
@@ -161,7 +167,7 @@
         "description": "",
         "parameters": [
           {
-            "name": "id",
+            "name": "eventId",
             "in": "path",
             "required": true,
             "type": "string"
@@ -226,6 +232,9 @@
           "200": {
             "description": "OK"
           },
+          "201": {
+            "description": "OK"
+          },
           "400": {
             "description": "Bad Request"
           }
@@ -235,7 +244,6 @@
     "/location/{id}": {
       "get": {
         "description": "",
-        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -292,6 +300,9 @@
         ],
         "responses": {
           "200": {
+            "description": "OK"
+          },
+          "204": {
             "description": "OK"
           },
           "400": {

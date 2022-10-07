@@ -2,8 +2,7 @@ const express = require('express');
 const routes = require('express').Router();
 const event = require('../routes/event');
 const location = require('../routes/location');
-const swaggerUi = require('swagger-ui-express');
-const swaggerDocument = require('./swagger.json');
+
 
 const { ensureAuth, ensureGuest } = require('../middleware/auth')
 

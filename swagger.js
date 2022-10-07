@@ -5,13 +5,13 @@ const doc = {
     title: 'My API',
     description: 'Description',
   },
-  host: 'cse341-eventmanager.onrender.com',
-  schemes: ['https'],
-  // host: 'localhost:8080',
-  // schemes: ['http'],
+  // host: 'cse341-eventmanager.onrender.com',
+  // schemes: ['https'],
+   host: 'localhost:8080',
+   schemes: ['http'],
 };
 
-const outputFile = './routes/swagger.json';
+const outputFile = './swagger.json';
 const endpointsFiles = ['./routes/index.js'];
 
 /* NOTE: if you use the express Router, you must pass in the 
